@@ -43,5 +43,3 @@ class _chatgpt:
       print('The 2 files were saved')
     except Exception:
       print(f"The call to ChatGPT for {restaurants['NAME']} returned the following error {Exception}")
-
-
