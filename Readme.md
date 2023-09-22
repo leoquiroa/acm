@@ -16,8 +16,8 @@ Create a file called `keys.json` in the root of the project
 
 **Use**
 
-* The file `prompt.txt` has the instruction to ChatGPT
-* The file `restaurants.json` has the list of restaurants to analyze
+* The file `Configs/prompt.txt` has the instruction to ChatGPT
+* The file `Configs/restaurants.json` has the list of restaurants to analyze and the number of reviews
 * The folder `Response` has 3 files for each resturant
     * the restaurante-name-yyyy-mm-dd-scrapper.json
     * the restaurante-name-yyyy-mm-dd-chatgpt-full.json
