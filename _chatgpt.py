@@ -36,15 +36,11 @@ class _chatgpt:
         presence_penalty=0
       )
       print(f"Call to ChatGPT sucessfully done for {restaurants['NAME']}")
-      # print(response)
       file_name = f"Response\\{restaurants['NAME']}.{Utils.get_today_date()}-chatgpt-full"
       Utils.save_response_as_json(file_name,response)
-      # print('--')
       file_name = f"Response\\{restaurants['NAME']}.{Utils.get_today_date()}-chatgpt-compact"
       Utils.save_response_as_json(file_name,response["choices"][0]["message"]["content"])
       print('The 2 files were saved')
-      # print(response["choices"][0]["message"]["content"])
-      # print('--')
     except Exception:
       print(f"The call to ChatGPT for {restaurants['NAME']} returned the following error {Exception}")
 
