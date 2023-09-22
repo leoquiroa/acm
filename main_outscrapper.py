@@ -1,16 +1,19 @@
 from outscraper import ApiClient
 from utils import Utils
 
-keys = Utils.read_keys()
+keys = Utils.read_json("keys.json")
 client = ApiClient(api_key=keys["OUTSCRAPER_API_KEY"])
-RESTAURANT_NAME = "https://www.yelp.com/biz/aba-austin-austin"
+restaurants = Utils.read_json(f"Configs\\restaurants.json")
+RESTAURANT_NAME = restaurants["NAME"]
+URL = "https://www.yelp.com/biz/"
+
 response = client.yelp_reviews(
-    query=RESTAURANT_NAME,
-    limit=25,
+    query=f"{URL}{RESTAURANT_NAME}",
+    limit=restaurants["LIMIT"],
     fields=["review_id","review_rating","review_text","date"],
     sort="date_desc"
 )
 print(response)
-file_name = RESTAURANT_NAME.split("/")[-1]
-Utils.save_response(f"Response/{file_name}",response[0])
+file_name = f"Response\\{RESTAURANT_NAME}.{Utils.get_today_date()}-scrapper"
+Utils.save_response_as_json(file_name,response[0])
 print('--')

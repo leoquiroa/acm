@@ -1,1 +1,0 @@
-This is a list of 10 reviews for a taco restaurant, can you find only the positive reviews and based on that provide a list of 5 adjectives about the restaurant and do the same for the negative reviews

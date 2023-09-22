@@ -15,4 +15,10 @@ Create a file called `keys.json` in the root of the project
     pip install outscraper
 
 **Use**
-The file `Prompt.txt` has the instruction to ChatGPT
+
+* The file `prompt.txt` has the instruction to ChatGPT
+* The file `restaurants.json` has the list of restaurants to analyze
+* The folder `Response` has 3 files for each resturant
+    * the restaurante-name-yyyy-mm-dd-scrapper.json
+    * the restaurante-name-yyyy-mm-dd-chatgpt-full.json
+    * the restaurante-name-yyyy-mm-dd-chatgpt-compact.json
