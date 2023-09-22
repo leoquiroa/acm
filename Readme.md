@@ -22,3 +22,7 @@ Create a file called `keys.json` in the root of the project
     * the restaurante-name-yyyy-mm-dd-scrapper.json
     * the restaurante-name-yyyy-mm-dd-chatgpt-full.json
     * the restaurante-name-yyyy-mm-dd-chatgpt-compact.json
+
+**Run**
+
+    `main` file is in charge of calling the 2 files _outscrapper and _chatgpt. All the parametrization should be set up in `prompt.txt` and `resturants.json`
