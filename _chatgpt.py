@@ -9,7 +9,7 @@ class _chatgpt:
     restaurants = Utils.read_json("Configs\\restaurants.json")
     file_name = f"Response\\{restaurants['NAME']}.{Utils.get_today_date()}-scrapper.json"
     reviews = Utils.read_json(file_name)
-    reviews = [x['review_text'] for x in reviews]
+    reviews = {x['review_id']:x['review_text'] for x in reviews}
 
     prompt_to_chatgpt = [
       {
@@ -17,11 +17,11 @@ class _chatgpt:
         "content": Utils.read_prompt_file()
       }
     ]
-    for review in reviews:
+    for k,v in reviews.items():
       prompt_to_chatgpt.append(
         {      
           "role": "user",
-          "content": review
+          "content": k + " - " + v
         }
       )
 
@@ -30,7 +30,7 @@ class _chatgpt:
         model="gpt-3.5-turbo",
         messages=prompt_to_chatgpt,
         temperature=0.02,
-        max_tokens=512,
+        max_tokens=1024,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0

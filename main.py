@@ -3,7 +3,7 @@ from _chatgpt import _chatgpt
 
 class main:
     def main():
-        _outscrapper()
+        # _outscrapper()
         _chatgpt()
 
     if __name__ == "__main__":
