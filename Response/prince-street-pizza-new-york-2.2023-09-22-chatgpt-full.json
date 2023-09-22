@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-81ZUpDQ2fj4wR6G63WdXpPAsagcNK",
+    "object": "chat.completion",
+    "created": 1695385467,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Positive adjectives: delightful, authentic, fair, must-visit, flavorful, friendly, fast, fantastic, fresh, enjoyable, great, good, solid, impeccable, love, good customer service, good prices, great flavor, favorite, legendary, tasty, crispy, fruity\n\nNegative adjectives: limited, disappointed, overpriced, okay, doughy, not good, bland, surly, rude, burnt, long wait, greasy, transactional, ignore, crap"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2087,
+        "completion_tokens": 97,
+        "total_tokens": 2184
+    }
+}
