@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-81ZzNPVsQfobwAhUJuuH8J6wQrlJm",
+    "object": "chat.completion",
+    "created": 1695387361,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Positive adjectives about the restaurant based on the positive reviews:\n1. Incredible\n2. Delicious\n3. Amazing\n4. Friendly\n5. Great\n\nNegative adjectives about the restaurant based on the negative reviews:\n1. Overpriced\n2. Disappointing\n3. Unwelcoming\n4. Discriminatory\n5. Rushed"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2660,
+        "completion_tokens": 72,
+        "total_tokens": 2732
+    }
+}
